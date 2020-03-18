@@ -16,6 +16,6 @@ Hard hats and approved footwear should be worn at all times
 
 #### Social Links
 
+- [LinkedIn](https://ca.linkedin.com/in/austin-jansz)
 - [ProtonMail](mailto:austinjansz@protonmail.com)
 - [Twitter](https://twitter.com/mr_jansz)
-- [LinkedIn](https://ca.linkedin.com/in/austin-jansz)
