@@ -51,7 +51,20 @@ With that said, SRM incorporates different overwrite methods to supplement data 
 - Should be used in conjunction with SFILL (apart of the same toolkit) to clear temporary copies of the files that were not securely deleted
 - Does not offer the same level of fine tuning as SCRUB
 
+### SCRUB
 
+### SHRED
+
+### Conclusions
+
+### References
+
+[1] http://fsmsh.com/3063
+[2] https://web.archive.org/web/20131208184307/http://www.h-online.com/newsticker/news/item/Secure-deletion-a-single-overwrite-will-do-it-739699.html
+[3] https://www.systutorials.com/docs/linux/man/1-srm/
+[4] https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html
+[5] https://www.unix.com/man-page/debian/1/srm/
+[6] https://www.sciencedirect.com/topics/computer-science/data-remanence
 
 
 
