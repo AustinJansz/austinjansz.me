@@ -70,12 +70,12 @@ SRM is a simple-to-use security tool that offers multiple modes for overwriting.
 
 ### References
 
-[1] http://fsmsh.com/3063
-[2] https://web.archive.org/web/20131208184307/http://www.h-online.com/newsticker/news/item/Secure-deletion-a-single-overwrite-will-do-it-739699.html
-[3] https://www.systutorials.com/docs/linux/man/1-srm/
-[4] https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html
-[5] https://www.unix.com/man-page/debian/1/srm/
-[6] https://www.sciencedirect.com/topics/computer-science/data-remanence
+- [1] http://fsmsh.com/3063
+- [2] https://web.archive.org/web/20131208184307/http://www.h-online.com/newsticker/news/item/Secure-deletion-a-single-overwrite-will-do-it-739699.html
+- [3] https://www.systutorials.com/docs/linux/man/1-srm/
+- [4] https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html
+- [5] https://www.unix.com/man-page/debian/1/srm/
+- [6] https://www.sciencedirect.com/topics/computer-science/data-remanence
 
 
 
