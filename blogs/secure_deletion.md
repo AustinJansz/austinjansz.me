@@ -1,7 +1,7 @@
 # 3 Secure Deletion Tools You Should Know About
 
-_Author_
-_Date_
+_Authors: Kinder Celemin, Austin Jansz, Ryan Schuette_
+_Date: 2020-04-05_
 
 ## Summary
 
@@ -31,7 +31,8 @@ With that said, SRM incorporates different overwrite methods to supplement data 
 - Gutmann: 35 passes as pictured in the below figure
 
 <center>
-	![Gutmann Method](../images/gutmann_method.png)
+	![Gutmann Method](https://austinjansz.me/images/gutmann_method.png)
+	
 	Gutmann Method [4]
 </center>
 
