@@ -43,6 +43,8 @@ With that said, SRM incorporates different overwrite methods to supplement data 
 - Multiple modes allowing for customization
 	- Allows for the usage of multi-pass overwriting
 - Nearly 100% (99.03%) chance of byte non-recovery with the most insecure method (simple/default) [2]
+- Part of toolkit that offers a well-rounded sanitization experience
+
 
 #### Disadvantages
 
@@ -50,6 +52,15 @@ With that said, SRM incorporates different overwrite methods to supplement data 
 	- Secure Erase is a better alternative for flash deletion [3]
 - Should be used in conjunction with SFILL (apart of the same toolkit) to clear temporary copies of the files that were not securely deleted
 - Does not offer the same level of fine tuning as SCRUB
+- Cannot solely remove all remnants of data
+- Default mode is not secure enough for critical data removal and does not meet the standards of government organizations
+
+
+#### Impact
+
+SRM is a simple-to-use security tool that offers multiple modes for overwriting.  This includes modes used by different government agencies and created by data scientists. With that said, securely deleting data from the source media does not guarantee complete due to data remnants that can be found in alternate file streams  [6]. It has also been researched by Peter Gutmann that magnetic data storage can hold variations in magnetivity that could be used for data retrieval [4]. With this information, SRM can take advantage of the modes created by Peter Gutmann to securely delete data from a storage device however this tool cannot be used to completely clear all traces found elsewhere in the system such as memory on temporary folders. Fortunately this is a part of a toolkit that offers tools to close these alternate data discovery methods making this a very secure tool when used for its designed purpose.
+
+#### Demonstation and Post-Operation Investigation
 
 ### SCRUB
 
