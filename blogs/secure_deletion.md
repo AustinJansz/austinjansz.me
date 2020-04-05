@@ -85,10 +85,10 @@ Command:
 Retrieval commands:
 
 - istat -r fat_partition_std 3 (entry numbers can be iterated to find files)
-- icat -f fat fat_partition_std 3 | head -n 10 (read the first 10 lines of the found file)
+- icat -f fat fat_partition_std 3
 
 <center>
-	<img src="https://austinjansz.me/images/secure_deletion/1-5-1.png"/>
+	<img width="50%" src="https://austinjansz.me/images/secure_deletion/1-5-1.png"/>
 </center>
 
 ##### Secure Removal (srm)
@@ -105,7 +105,7 @@ Commands (time command added to show duration of process):
 Retrieval commands:
 
 - istat -r fat_partition_modename 3 (entry numbers can be iterated to find files)
-- icat -f fat fat_partition_modename 3 | head -n 10 (read the first 10 lines of the found file)
+- icat -f fat fat_partition_modename 3
 
 <center>
 	<img src="https://austinjansz.me/images/secure_deletion/1-5-2-3.png"/>
@@ -134,10 +134,28 @@ The execution time is directly related to the pass count used by each method, th
 A logarithmic relationship was found for the execution time of these methods showing that if this secure deletion is used, increasing the passes past a factor of 3 has a lessened effect on the execution time of the removal.
 
 <center>
-	<img src="https://austinjansz.me/images/secure_deletion/1-5-6.png"/>
+	<img width="50%" src="https://austinjansz.me/images/secure_deletion/1-5-6.png"/>
 </center>
 
 ### SCRUB
+
+#### About
+
+Scrub is another tool that is included in most Linux distributions that again handles secure file deletion. The main difference between this utility and Secure Remove is that rather than overwriting renaming and truncating, this will just write different patterns to the files in question.
+
+#### How it works
+
+Scrub works by iterating over the files subject to deletion, while also writing different patterns in hopes to make recovering or undeleting the data much more difficult. Scrub has three distinct methods of operation, those being special file, regular, and directory mode.
+    
+Special file mode will target the specific file corresponding to the entire disk, then will scrub that file using the method explained above, which in turn destroys all the data. This is considered the most effective method of the three.
+
+File mode will target only the file and will scrub it completely with the option to also do the same to the directory entry, which would completely destroy it.
+
+Lastly, directory mode will fill the entire filesystem with files until there isn't any more space left, then each and every file is scrubbed like it would be in the regular mode. This mode has a distinct flag that must be noted in order to use it to make sure it's something you really want to do.
+
+<center>
+	<img width="50%" src="https://austinjansz.me/images/secure_deletion/2-2.png"/>
+</center>
 
 ### SHRED
 
