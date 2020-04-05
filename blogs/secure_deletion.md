@@ -32,7 +32,7 @@ With that said, SRM incorporates different overwrite methods to supplement data 
 - Gutmann: 35 passes as pictured in the below figure
 
 <center>
-	<img src="https://austinjansz.me/images/secure_deletion/1-2.png" alt="Gutmann 35 Pass Method"/>
+	<img width="50%" src="https://austinjansz.me/images/secure_deletion/1-2.png" alt="Gutmann 35 Pass Method"/>
 </center>
 
 #### Advantages
@@ -61,7 +61,7 @@ With that said, SRM incorporates different overwrite methods to supplement data 
 
 #### Impact
 
-SRM is a simple-to-use security tool that offers multiple modes for overwriting.  This includes modes used by different government agencies and created by data scientists. With that said, securely deleting data from the source media does not guarantee complete due to data remnants that can be found in alternate file streams  [6]. It has also been researched by Peter Gutmann that magnetic data storage can hold variations in magnetivity that could be used for data retrieval [4]. With this information, SRM can take advantage of the modes created by Peter Gutmann to securely delete data from a storage device however this tool cannot be used to completely clear all traces found elsewhere in the system such as memory on temporary folders. Fortunately this is a part of a toolkit that offers tools to close these alternate data discovery methods making this a very secure tool when used for its designed purpose.
+SRM is a simple-to-use security tool that offers multiple modes for overwriting.  This includes modes used by different government agencies and created by data scientists. With that said, securely deleting data from the source media does not guarantee complete due to data remnants that can be found in alternate file streams  [5]. It has also been researched by Peter Gutmann that magnetic data storage can hold variations in magnetivity that could be used for data retrieval [4]. With this information, SRM can take advantage of the modes created by Peter Gutmann to securely delete data from a storage device however this tool cannot be used to completely clear all traces found elsewhere in the system such as memory on temporary folders. Fortunately this is a part of a toolkit that offers tools to close these alternate data discovery methods making this a very secure tool when used for its designed purpose.
 
 #### Demonstation and Post-Operation Investigation
 
@@ -88,7 +88,7 @@ Retrieval commands:
 - icat -f fat fat_partition_std 3
 
 <center>
-	<img width="50%" src="https://austinjansz.me/images/secure_deletion/1-5-1.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/1-5-1.png"/>
 </center>
 
 ##### Secure Removal (srm)
@@ -154,7 +154,7 @@ File mode will target only the file and will scrub it completely with the option
 Lastly, directory mode will fill the entire filesystem with files until there isn't any more space left, then each and every file is scrubbed like it would be in the regular mode. This mode has a distinct flag that must be noted in order to use it to make sure it's something you really want to do.
 
 <center>
-	<img width="50%" src="https://austinjansz.me/images/secure_deletion/2-2.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/2-2.png"/>
 </center>
 
 ### SHRED
@@ -163,12 +163,11 @@ Lastly, directory mode will fill the entire filesystem with files until there is
 
 ### References
 
-- [1] http://fsmsh.com/3063
-- [2] https://web.archive.org/web/20131208184307/http://www.h-online.com/newsticker/news/item/Secure-deletion-a-single-overwrite-will-do-it-739699.html
-- [3] https://www.systutorials.com/docs/linux/man/1-srm/
-- [4] https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html
-- [5] https://www.unix.com/man-page/debian/1/srm/
-- [6] https://www.sciencedirect.com/topics/computer-science/data-remanence
+- [1] Richmond, G. (2008, November 29). Shred and secure-delete: tools for wiping files, partitions and disks in GNU/Linux. In Free Software Magazine. Retrieved from [fsmsh.com/3063](http://fsmsh.com/3063)
+- [2] Secure deletion: a single overwrite will do it (2009, January 17). In H-Online. Retrieved from [www.h-online.com/newsticker/news/item/Secure-deletion-a-single-overwrite-will-do-it-739699.html](https://web.archive.org/web/20131208184307/http://www.h-online.com/newsticker/news/item/Secure-deletion-a-single-overwrite-will-do-it-739699.html)
+- [3]  srm (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from [www.systutorials.com/docs/linux/man/1-srm/](https://www.systutorials.com/docs/linux/man/1-srm/)
+- [4] Gutmann, P. (1996, July 25). Secure Deletion of Data from Magnetic and Solid-State Memory. In University of Auckland. Retrieved from [www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html](https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html)
+- [5] Data Remanence (n.d.). In ScienceDirect. Retrieved from [www.sciencedirect.com/topics/computer-science/data-remanence](https://www.sciencedirect.com/topics/computer-science/data-remanence)
 
 
 
