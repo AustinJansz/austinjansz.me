@@ -6,7 +6,19 @@ _Date: 2020-04-05_
 
 ## Summary
 
+Three command-line based tools used for the secure deletion of files were investigated for their ability to successfully remove content from systems. SRM, Scrub, and Shred were investigated for their performance on live system files as well as images of systems. Through research and trial runs of this software, it was found that each had common advantages and disadvantages. SRM offered multiple common overwriting methods used by government agencies such as the United States Department of Defense (DoD) and Canada's Royal Canadian Mounted Police (RCMP) however did not allow the user to fine tune the process. Scrub allows for the overwriting of files using patterns similar to SRM; it too is limited to standard patterns. Where Scrub lacks, however, is in its ability to wipe space that has already been deallocated. Lastly, Shred is a core GNU utility that is widely available and offers a great deal of customizability and user control and is only victim to limitations shared by the other two tools. These tools share the limitation of lacking complete data remnant removal. Files often leave copies of themselves while being processed in not only temporary directories but also in memory. This requires either a full device wiping or the use of additional tools such as SMEM, SSWAP and SFILL (which come packaged with SRM). All three tools offer multiple pass overwriting and high level of security, where SRM stands out with its packaged software and Shred with its high level of user customizability.
+
 ## Introduction
+
+The following report was created as an investigation into the secure deletion of data in the form of files and devices. Digital Forensics is a field where data retrieval and secure data destruction are partnered in their use by law enforcement and government agencies. In many cases critical data must be destroyed in the event of a system being decommissioned and its data must be destroyed to prohibit any adversaries from accessing its data.
+
+This report is broken up into three section, one for each SRM, Scrub, and Shred and is then segmented the following stages:
+1. An intro to the tool and why it was developed
+2. A brief overview of how it works
+3. The specific advantages and disadvantages of the tool
+4. Its impact and how well it accomplishes its objectives
+5. Lastly, a demonstration and post-operation investigation (retrieval attempts)
+
 
 ## Tools
 
@@ -151,15 +163,83 @@ Special file mode will target the specific file corresponding to the entire disk
 
 File mode will target only the file and will scrub it completely with the option to also do the same to the directory entry, which would completely destroy it.
 
-Lastly, directory mode will fill the entire filesystem with files until there isn't any more space left, then each and every file is scrubbed like it would be in the regular mode. This mode has a distinct flag that must be noted in order to use it to make sure it's something you really want to do.
+Lastly, directory mode will fill the entire filesystem with files until there isn't any more space left, then each and every file is scrubbed as it would be in the regular mode. This mode has a distinct flag that must be noted in order to use it to make sure it's something you really want to do.
 
 <center>
 	<img src="https://austinjansz.me/images/secure_deletion/2-2.png"/>
 </center>
 
+#### Impact
+
+Ideally, the impact of this would be that the files that were “securely deleted” with this utility, shouldn’t be recoverable. Methods of undeleting should be unsuccessful therefore making the file deleted forever.
+
+#### Advantages
+
+- Multiple standards of deletion
+- Great default settings
+
+#### Disadvantages
+
+- Limited by OS
+- Limited by file system
+- Need to specify if file should be deleted or just the contents
+
+#### Demonstation and Post-Operation Investigation
+
+<center>
+	<img src="https://austinjansz.me/images/secure_deletion/2-3-1-2.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/2-3-3.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/2-4-1-2.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/2-4-3-4.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/2-4-5-6.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/2-4-7-8.png"/>
+</center>
+
 ### SHRED
 
+#### About
+
+Again, shred is another utility or tool that is available to use in most distributions of Linux. This one is a little different however because while this tool can delete files but it is entirely optional. Shred is meant to make sure that the contents of a file cannot be recovered. Or at least it will provide the least likely able to do so.
+
+#### How it Works
+
+Shred works a little differently than the previous two secure deletion utilities. Shred aims to make sure that the contents of a file can not be accessed, and it does this by overwriting the contents of the file over and over. The default number of overwrites this process will do is three, however, this can be changed to any custom value. Of course, the more times a file is overwritten the more secure you can be in the idea that the original contents will not be recovered.
+
+Now with all that being said, none of this process actually deletes the files in question. To actually delete the file after the overwriting process a specific option must be specified in the command before execution.
+
+#### Impact
+
+Ideally, the impact of this would be that the files that were “securely deleted” with this utility, shouldn’t be recoverable. Methods of undeleting should be unsuccessful therefore making the file deleted forever.
+
+#### Advantages
+
+- Great for wiping files
+	- Standard delete uses 3 iterations of different methods
+- Fully customizable
+
+#### Disadvantages
+
+- Shred leaves behind traces of deleted files
+
+#### Demonstration and Post-Operation Investigation
+
+Similar details before and after deletion. We can see where the file is and it’s content location
+
+<center>
+	<img src="https://austinjansz.me/images/secure_deletion/3-1-1-2.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/3-2.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/3-3-1-2.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/3-3-3-4.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/3-3-5-6.png"/>
+	<img src="https://austinjansz.me/images/secure_deletion/3-3-7-8.png"/>
+</center>
+
 ### Conclusions
+
+Overall we can see that these are only three utilities that can be used to securely delete files from your system. While there are many many more, they all do the same thing in different ways, but that doesn't mean these tools are foolproof. Each of these tools makes it much more difficult to recover the data, but it isn't necessarily an impossible task. There are more steps that should be taken in order for you to be sure that your data is gone for good.
+
+File systems hold on to temporary files and other data in the background that isn't necessarily out in the open. So other tools must be used in order to make sure the data is gone. First off it is recommended to wipe the entire drive rather than just individual files to make sure those temporary files aren't there. As an example, SRM has sister tools that can be used to wipe memory and unallocated data that SRM cannot do directly. After wiping the drive, memory, and unallocated data, you can rest assured that the data you had is gone for good.
+
 
 ### References
 
@@ -168,6 +248,7 @@ Lastly, directory mode will fill the entire filesystem with files until there is
 - [3]  srm (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from [www.systutorials.com/docs/linux/man/1-srm/](https://www.systutorials.com/docs/linux/man/1-srm/)
 - [4] Gutmann, P. (1996, July 25). Secure Deletion of Data from Magnetic and Solid-State Memory. In University of Auckland. Retrieved from [www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html](https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html)
 - [5] Data Remanence (n.d.). In ScienceDirect. Retrieved from [www.sciencedirect.com/topics/computer-science/data-remanence](https://www.sciencedirect.com/topics/computer-science/data-remanence)
-
+- [6] scrub (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from https://www.systutorials.com/docs/linux/man/1-scrub/
+- [7] shred (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from https://www.systutorials.com/docs/linux/man/1-shred/
 
 
