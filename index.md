@@ -3,5 +3,5 @@
 
 ### Site Links
 
-- [Blog + Tutorials](blogs/index.md)
+- [Blog + Tutorials](blog/index.md)
 - [Where to Find Me](findme.md)
