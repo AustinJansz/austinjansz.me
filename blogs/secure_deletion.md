@@ -248,7 +248,7 @@ File systems hold on to temporary files and other data in the background that is
 - [3]  srm (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from [www.systutorials.com/docs/linux/man/1-srm/](https://www.systutorials.com/docs/linux/man/1-srm/)
 - [4] Gutmann, P. (1996, July 25). Secure Deletion of Data from Magnetic and Solid-State Memory. In University of Auckland. Retrieved from [www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html](https://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html)
 - [5] Data Remanence (n.d.). In ScienceDirect. Retrieved from [www.sciencedirect.com/topics/computer-science/data-remanence](https://www.sciencedirect.com/topics/computer-science/data-remanence)
-- [6] scrub (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from https://www.systutorials.com/docs/linux/man/1-scrub/
-- [7] shred (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from https://www.systutorials.com/docs/linux/man/1-shred/
+- [6] scrub (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from [www.systutorials.com/docs/linux/man/1-scrub/](https://www.systutorials.com/docs/linux/man/1-scrub/)
+- [7] shred (1) - Linux Man Pages (n.d.). In SysTutorials. Retrieved from [www.systutorials.com/docs/linux/man/1-shred/](https://www.systutorials.com/docs/linux/man/1-shred/)
 
 
