@@ -1,4 +1,4 @@
-# Media Server Setup
+# Building a JellyFin Server with Remote Access
 
 ## Objectives
 
