@@ -1,0 +1,34 @@
+## Where You Can Find Me
+
+#### Check out My Code Repositories for Open Source Tools
+- [PowerShell Utilities](https://github.com/AustinJansz/powershell_utilities)
+  - Algorithms and Puzzles
+    - Get-SortedStack: stack sorter
+    - 15_Puzzle: classic puzzle game
+  - Functions
+    - Get-StringHash: logical extension of PowerShell to hash strings
+    - System-CryptoFunctions: suite of cryptographic psuedo RNG functions
+  - GUI Applications
+    - System-ConnectivityTest: graphic ping test in written in pure PowerShell
+- [Shell Toolbox](https://github.com/AustinJansz/sh_toolbox)
+  - File_Cleanse: remove sensitive metadata from files
+  - Folderize: move child items to their own folders with an appropriate name
+- [Python Toolbox](https://github.com/AustinJansz/python_toolbox)
+  - Colour_Replacement: replace any supplied colour with another
+  - Password_Generator: create a password using system randomness (to be updated with cryptographically secure RNG in future commit)
+- [Forensics](https://github.com/AustinJansz/forensics)
+  - MBR Scanner: scans MBR from a file system and displays detailed schematic
+- [Security](https://github.com/AustinJansz/security)
+  - Bruteforcers: various web-request bruteforces for security testing
+  - Web Script: various information gathering scrapers for security testing
+  - Wordlists: various wordlist used in combination with scripts for security testing
+- [Docker](https://github.com/AustinJansz/docker)
+  - Tor_Proxy: open a Tor proxy socket to anonymize traffic
+  - Wordpress_Sandbox: simple Wordpress server that can be easily created to test plugins and configurations
+- [Cryptography](https://github.com/AustinJansz/cryptography)
+  - Crypto_Multitool: suite of stegonogpraphy tools, key wrapping tools, and hashing tools meant to teach the user more about cryptography
+  - Stone_Crypt: cipher created for participation in a cipher-creation tournament that employs strong scrambling and prime number arithmetic to generate ciphertext
+- [Stone Crypt AES](https://github.com/AustinJansz/stone-crypt-aes)
+  - Golang implementation of AES with varying key sizes
+- [Go Simple Webserver](https://github.com/AustinJansz/go-simple-webserver)
+  - Simple and extensible webserver compiled for Windows, Mac, and Linux
